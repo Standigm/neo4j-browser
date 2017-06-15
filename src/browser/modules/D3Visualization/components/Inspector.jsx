@@ -47,7 +47,7 @@ export class InspectorComponent extends Component {
         return (
           <StyledInspectorFooterRowListPair className='pair' key={'prop' + i}>
             <StyledInspectorFooterRowListKey className='key'>{prop.key + ': '}</StyledInspectorFooterRowListKey>
-            <StyledInspectorFooterRowListValue className='value'>{prop.value.toString()}</StyledInspectorFooterRowListValue>
+            <StyledInspectorFooterRowListValue className='value' dangerouslySetInnerHTML={{__html: prop.value.toString()}}></StyledInspectorFooterRowListValue>
           </StyledInspectorFooterRowListPair>
         )
       })
